@@ -1,11 +1,10 @@
 {
   "name": "create-typescript-service",
-  "version": "1.0.1",
-  "description": "Create a TypeScript app",
+  "version": "1.0.2",
+  "description": "Create a TypeScript microservice",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,11 +16,11 @@
   "author": "Dylan MacKenzie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dmackenz/create-ts-app/issues"
+    "url": "https://github.com/dmackenz/create-typescript-service/issues"
   },
-  "homepage": "https://github.com/dmackenz/create-ts-app#readme",
+  "homepage": "https://github.com/dmackenz/create-typescript-service#readme",
   "bin": {
-    "create-ts-service": "./src/cli.js"
+    "create-typescript-service": "./src/cli.js"
   },
   "dependencies": {
     "chalk": "^2.4.2",
