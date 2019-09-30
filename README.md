@@ -1,7 +1,7 @@
 # create-typescript-service
 A command line utility to create a TypeScript microservice template quickly.
 
-###### Install
+##### Install
 ```bash
 $ npm i -g create-typescript-service
 ```
