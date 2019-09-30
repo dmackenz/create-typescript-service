@@ -1,6 +1,6 @@
 {
   "name": "create-typescript-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create a TypeScript microservice",
   "main": "cli.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmackenz/create-ts-app.git"
+    "url": "git+https://github.com/dmackenz/create-typescript-service.git"
   },
   "keywords": [
     "cts"
