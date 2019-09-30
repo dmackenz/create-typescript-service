@@ -16,6 +16,7 @@ $ create-typescript-service my_new_microservice
 ```
 
 ##### What Gets Created
+```
 .
 ├── node_modules
 ├── Dockerfile
@@ -26,3 +27,4 @@ $ create-typescript-service my_new_microservice
 │   └── routes
 │       └── BasicRouter.ts
 └── tsconfig.json
+```
