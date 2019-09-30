@@ -5,6 +5,7 @@ const { log, err } = require('./log');
 const dependencies = [
   'json',
   'typescript',
+  '@types/node',
   'express',
   '@types/express',
   'helmet',
