@@ -11,6 +11,10 @@ const dependencies = [
   'helmet',
   'body-parser',
   'nodemon',
+  'mocha',
+  '@types/mocha',
+  'chai',
+  '@types/chai'
 ];
 
 const scripts = [
@@ -18,6 +22,7 @@ const scripts = [
   ['start', 'node build/index.js'],
   ['dev', 'nodemon node build/index.js'],
   ['clean', 'rm -rf ./build'],
+  ['test', 'mocha build/tests/index.test.js']
 ];
 
 const createService = async (service) => {
@@ -40,8 +45,11 @@ const createService = async (service) => {
       shelljs.exec(`npx json -I -f package.json -e 'this.scripts.${script[0]}="${script[1]}"'`);
     });
 
-    log('Creating dockerfile');
+    log('Creating Dockerfile');
     shelljs.exec(`cp ${path.join(__dirname, 'entities', 'Dockerfile')} Dockerfile`);
+
+    log('Creating .dockerignore file');
+    shelljs.exec(`cp ${path.join(__dirname, 'entities', '.dockerignore')} .dockerignore`);
 
     log('Creating typescript configuration');
     shelljs.exec(`cp ${path.join(__dirname, 'entities', 'tsconfig.json')} tsconfig.json`);
@@ -57,6 +65,15 @@ const createService = async (service) => {
 
     log('Creating BasicRouter script');
     shelljs.exec(`cp ${path.join(__dirname, 'entities', 'BasicRouter.ts')} src/routes/BasicRouter.ts`);
+
+    log('Creating tests folder');
+    shelljs.mkdir('tests');
+
+    log('Creating index test script');
+    shelljs.exec(`cp ${path.join(__dirname, 'entities', 'index.test.ts')} tests/index.test.ts`);
+
+    log('Creating sample test script');
+    shelljs.exec(`cp ${path.join(__dirname, 'entities', 'sample.test.ts')} tests/sample.test.ts`);
 
     log('Available npm scripts:');
     shelljs.exec('npm run');
