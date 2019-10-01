@@ -20,11 +20,14 @@ $ create-typescript-service my_new_microservice
 .
 ├── node_modules
 ├── Dockerfile
-├── package-lock.json
+├── .dockerignore
 ├── package.json
 ├── src
 │   ├── index.ts
 │   └── routes
 │       └── BasicRouter.ts
+├── tests
+│   ├── index.test.ts
+│   ├── sample.test.ts
 └── tsconfig.json
 ```
