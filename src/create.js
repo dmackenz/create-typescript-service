@@ -19,6 +19,7 @@ const dependencies = [
 
 const scripts = [
   ["build", "tsc"],
+  ["compile", "tsc -w"],
   ["start", "node build/src/index.js"],
   ["dev", "nodemon node build/src/index.js"],
   ["clean", "rm -rf ./build"],
